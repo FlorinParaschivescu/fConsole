@@ -1,5 +1,5 @@
 # fConsole
-fConsole v1.0 - For touch devices and desktop browsers
+fConsole.js v1.0 - For touch devices and desktop browsers
 
 <ul class="list clearfix">
   <li>you will need jQuery</li>

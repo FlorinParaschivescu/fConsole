@@ -25,6 +25,9 @@ pre {
 .warpper .examples .testing-area ul.list { margin: 0; padding: 0; list-style: circle; list-style-position: inside; list-style-type: disc; }
 .warpper .examples .testing-area ul.list li { margin: 0; padding: 4px; float: none; }
 .warpper .examples .testing-area ul.list li ul { list-style-type: square; margin: 5px 0 0 30px; }
+.warpper .footer { margin: 60px 0; }
+.warpper .footer ul { margin: 20px 0; padding: 0; }
+.warpper .footer ul li { list-style: none; }
 
 .animation-wrapper { position: relative; padding: 10px; height: 200px; }
 .animation-wrapper #animation-element-1 { position: absolute; left: 10px; width: 100px; height: 100px; background-color: #FFFF00; color: #000; text-align: center; line-height: 100px; }

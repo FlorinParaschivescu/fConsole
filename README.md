@@ -1,4 +1,4 @@
-# fConsole
+# fConsole.js
 fConsole.js v1.0 - For touch devices and desktop browsers
 
 <ul class="list clearfix">

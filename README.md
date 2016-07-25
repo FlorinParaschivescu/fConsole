@@ -1,31 +1,60 @@
 # fConsole.js
-fConsole.js v1.0 - For touch devices and desktop browsers
+fConsole.js v1.1 - For touch devices and desktop browsers
 
-<ul class="list clearfix">
-  <li>you will need jQuery</li>
-	<li>very useful for environments who lack of a console</li>
-	<li>you can <b>dragg</b> the console around the browser (works fine on touch devices too)</li>
-	<li>you can run <b>Javascript code</b> in fConsole footer area and see the results by pressing enter key or 'Exec' button.</li>
-	<li>you can <b>minimize</b> the console</li>
-	<li>will <b>log Javascript errors</b></li>
-	<li>on desktop browsers use <b>UP</b> or <b>DOWN</b> keys to access typing history</li>
+A simple plugin that you can use to display the values from JavaScript, HTML, CSS. Very useful for touch devices and desktop browsers.
+
+<ul>
+	<li>useful for environments who lack of a console eg. (mobile, tables - browsers) as well for desktop browsers</li>
+	<li>you can dragg the console around the browser (works on touch devices too)</li>
+	<li>you can resize the console (works on touch devices too)</li>
+	<li>you can run JavaScript code from fConsole and see the results by pressing Enter Key or Exec button</li>
+	<li>will log all JavaScript errors</li>
+	<li>on desktop browsers use "UP" or "DOWN" keys to access typing history</li>
+	<li>you can clear/minimize the console</li>
 	<li>
 		available keyboard shortcuts:
 		<ul>
-			<li><b>Alt + C</b> - Open fConsole</li>
-			<li><b>Alt + X</b> - Close fConsole</li>
-			<li><b>Alt + Z</b> - Minimize fConsole</li>
-			<li><b>Alt + D</b> - Clear fConsole</li>
+			<li>alt + c - Open fConsole</li>
+			<li>alt + x - Close fConsole</li>
+			<li>alt + z - Minimize fConsole</li>
+			<li>alt + d - Clear fConsole</li>
 		</ul>
 	</li>
-  <li>
-      <h2>How to use this plugin</h2>
-      <ul>
-          <li>
-<pre>
-var myConsole;
+	<li>
+		available inline commands:
+		<ul>
+			<li>type /? or /help - will show all avaiable commands</li>
+			<li>type /cls or /clear - Clear fConsole</li>
+			<li>type /m or /min or /minimize - Minimize fConsole</li>
+			<li>type /c or /close - Close fConsole</li>
+		</ul>
+	</li>
+	<li>
+		general Help Functions
+		<ul>
+			<li>you can access them like fConsole.fn.<function-name></li>
+		</ul>
+	</li>
+</ul>
 
-(function () {
+# How to use this plugin
+
+<ul>
+	<li>
+		Direct usage - will use default options
+<pre>
+$(document).ready(function () {
+    fConsole.log("Hello!"); //simple message
+    fConsole.log("Hello!", null, "#00FF00"); //message with custom BgColor
+    fConsole.log("Hello!", null, "#00FF00", "#000"); //message with custom BgColor and TextColor
+    fConsole.log(function() { return Date.now(); }, 1000); //message in realtime - get time stamp at one second interval
+});
+</pre>
+	</li>
+	<li>
+		New object - using default options
+<pre>
+$(document).ready(function () {
     //init console
     myConsole = new fConsole({
         hideHeader: false, //if is true - will disable draggable option
@@ -43,70 +72,59 @@ var myConsole;
         logJSErrors: true, //will log JS errors
         zIndex: 2147483647
     });
-})();
-
-$(document).ready(function () {
     //myConsole.log method parameters
-    //  first - a string
-    //  second - interval - set in miliseconds
-    //  third - row background color
-    //  four - row text color
-    
-    //simple message
-    myConsole.log("Hello!");
-    
-    //mssage with custom BgColor
-    myConsole.log("Hello!", null, "#00FF00");
-    
-    //mssage withc custom BgColor and TextColor
-    myConsole.log("Hello!", null, "#00FF00", "#000");
-    
-    //message in realtime - get time stamp at one second interval
-    myConsole.log(function() { return Date.now(); }, 1000);
+        //  first param - a string
+        //  second param - interval - set in miliseconds
+        //  third param - row background color
+        //  four param - row text color
+        
+    myConsole.log("Hello!"); //simple message
+    myConsole.log("Hello!", null, "#00FF00"); //message with custom BgColor
+    myConsole.log("Hello!", null, "#00FF00", "#000"); //message with custom BgColor and TextColor
+    myConsole.log(function() { return Date.now(); }, 1000); //message in realtime - get time stamp at one second interval
 });
 </pre>
-          </li>
-      </ul>
-  </li>
-  <li>
-      you can use the <b>fConsole directly</b> too - will use default options
-      <ul>
-          <li>
+	</li>
+	<li>
+		Change fConsole Settings like this
 <pre>
 $(document).ready(function () {
-    //simple message
-    fConsole.log("Hello!");
-    
-    //mssage with custom BgColor
-    fConsole.log("Hello!", null, "#00FF00");
-    
-    //mssage withc custom BgColor and TextColor
-    fConsole.log("Hello!", null, "#00FF00", "#000");
-    
-    //message in realtime - get time stamp at one second interval
-    fConsole.log(function() { return Date.now(); }, 1000);
-});
-</pre>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            you can change <b>fConsole settings</b> like this
-                            <ul>
-                                <li>
-<pre>
-var myConsole;
-(function () {
-    //init console
     myConsole = new fConsole();
-})();
-$(document).ready(function () {
     myConsole.reloadSettings({ theme: "default" });
-    
     myConsole.reloadSettings({ width: "100%", minWidht: 0 });
 });
 </pre>
-            </li>
-        </ul>
-    </li>
+	</li>
+	<li>
+		Help Functions
+<pre>
+$(document).ready(function () {
+    fConsole.fn.isNumeric("123"); //will return true
+    fConsole.fn.isNumeric("123$%"); //will return false
+    fConsole.fn.isInt(123); //will return true
+    fConsole.fn.isTouchDevice();
+    
+    //etc...
+});
+</pre>
+	</li>
+</ul>
+
+# Change log
+
+<ul>
+	<li>v1.1 - 24 July, 2016</li>
+	<ul>
+		<li>[FEATURE] – add clear button into header</li>
+		<li>[FEATURE] – add resize functionality to make the resize more easy</li>
+		<li>[FEATURE] – add inline commands. Type in fConsole "/?" or "/help" to see them</li>
+		<li>[FEATURE] – minimize console by pressing "ESC" key, press again to close it</li>
+		<li>[FEATURE] – add lots of methods that may help you. Click here to see them</li>
+		<li>[BUG FIXED]  – fixed the eval js method</li>
+		<li>[BUG FIXED]  – general code improvement</li>
+	</ul>
+	<li>v1.0 - 11 January, 2016</li>
+	<ul>
+		<li>initial release</li>
+	</ul>
 </ul>

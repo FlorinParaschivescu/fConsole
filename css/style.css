@@ -1,59 +1,109 @@
 html, body { margin: 0; padding: 0; }
-body { font-family: "Lato", Arial; font-size: 14px; color: #444; position: relative; line-height: 100%; background-color: #D1D1D1; }
+body { font-family: "Lato", Arial; font-size: 14px; color: #FFF; position: relative; line-height: 100%; background-color: #FFF; }
 
-button { background-color: #4585F2; border: 1px solid transparent; border-radius: 2px; color: #FFF; cursor: pointer; padding: 5px 10px; margin: 0 0 10px 0; }
-button:hover { border: 1px solid #3468C1; }
-h1 { margin: 10px 0; font-size: 32px; line-height: 100%; color: #017AED; }
-h2 { margin: 10px 0; font-size: 22px; line-height: 100%; border-bottom: 1px solid #444; padding-bottom: 10px; }
-a, a:visited { text-decoration: none; color: #017AED; }
+a, a:visited { text-decoration: none; color: #FFF; }
 a:hover { text-decoration: underline; }
-pre {
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    font-size: 12px;
+pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; font-size: 12px; }
+ul { margin: 0; padding: 0; }
+ul li { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 100%; margin: 0; padding: 0; }
+h1 { font-size: 40px; }
+h2 { color: #474747; font-size: 30px; }
+h3 { color: #738FAE; font-size: 20px; }
+p { margin: 0; padding: 0; }
+
+.c1 { color: #017AED !important; }
+.c2 { color: #39AE63 !important; }
+
+.header { background-color: #333; padding: 35px 0; }
+.header .h-content { width: 900px; margin: 0 auto; }
+.header .menu .js-logo { float: left; }
+.header .menu ul { float: right; text-align: center; }
+.header .menu ul li { display: inline-block; margin-right: 15px; }
+.header .menu ul li:last-child {margin-right: 0; }
+.header .menu ul li a.buy { color: #39AE63; }
+.header .text { text-align: center; }
+.header h1.title { letter-spacing: 1px; }
+.header p.description { padding: 30px 0 0 0; line-height: 22px; }
+
+.content { width: 900px; margin: 0 auto; }
+.content .example { margin-top: 50px; }
+.content .example.last { margin-bottom: 50px; }
+.content .example .text h2 { letter-spacing: 1px; }
+.content .example .text p { color: #777; margin-top: 10px; }
+.content .example .actions { margin-top: 30px; }
+.content .example .actions button { background-color: #39AE63; color: #FFF; border-radius: 3px; border: none; padding: 10px; cursor: pointer; }
+.content .example .actions button:hover { background-color: #39A25E; }
+.content .example .actions h3 { margin-bottom: 15px; }
+
+.content .example.example5 ul li { color: #444; }
+.content .example.example5 ul li h3 { position: relative; cursor: pointer; border-bottom: 1px dotted #DDD; padding-bottom: 10px; -moz-user-select: none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+.content .example.example5 ul li h3:hover { font-weight: bold; }
+.content .example.example5 ul li h3:before { content: "+"; position: absolute; margin: auto; width: 20px; height: 20px; top: 0; right: 5px; bottom: 0; left: auto; text-align: center; }
+.content .example.example5 ul li.open h3 { font-weight: bold; }
+.content .example.example5 ul li.open h3:before { content: "-"; }
+.content .example.example5 ul li ul { margin-left: 20px; display: none; }
+.content .example.example5 ul li.open ul { display: block; }
+.content .example.example5 ul li ul li .method-name { color: #017AED; }
+.content .example.example5 ul li ul li .method-use { margin: 10px 0 10px 20px; background-color: #DDD; padding: 10px; }
+.content .example.example5 ul li ul li .method-use p { font-size: 12px; margin-bottom: 10px; }
+.content .example.example5 ul li ul li .method-use pre { color: #017AED; }
+
+.content .example.example6 ul li { display: inline-block; margin-right: 15px; }
+.content .example.example6 ul li:last-child { margin-right: 0; }
+.content .example.example6 ul.feature-list { margin-top: 15px; }
+.content .example.example6 ul.feature-list li { color: #444; display: list-item; margin-right: 0; }
+.content .example.example6 ul.feature-list li ul { margin: 0 0 10px 40px; }
+.content .example.example6 ul.feature-list li ul li { list-style-type: disc; padding: 5px 10px 5px 0; }
+
+.content .example.example7 ul li { color: #444; }
+.content .example.example7 ul li ul { margin: 0 0 10px 40px; }
+.content .example.example7 ul li ul li { list-style-type: disc; padding: 5px 10px 5px 0; }
+
+.content .example .animation-wrapper { position: relative; padding: 10px; height: 200px; }
+.content .example .animation-wrapper #animation-element-1 { cursor: pointer; position: absolute; left: 10px; width: 100px; height: 100px; background-color: #FFFF00; color: #000; text-align: center; line-height: 100px; }
+.content .example .animation-wrapper #animation-element-2 { cursor: pointer; position: absolute; left: 210px; width: 100px; height: 100px; background-color: #FF0000; color: #FFF; text-align: center; line-height: 100px; }
+.content .example .animation-wrapper #animation-element-3 { cursor: pointer; position: absolute; left: 410px; width: 100px; height: 100px; background-color: #0000FF; color: #FFF; text-align: center; line-height: 100px; }
+
+.content #drag-me { position: fixed; bottom: 100px; left: 170px; }
+
+.footer { background-color: #333; padding: 35px 0; }
+.footer .f-content { width: 900px; margin: 0 auto; text-align: center; }
+.footer ul { text-align: center; margin: 0 0 15px 0;  }
+.footer ul li { display: inline-block; }
+.footer ul li span.separator { display: block; margin: 0 10px; color: #FFF; }
+.footer ul li a {  }
+.footer .copyright { color: #FFF; }
+
+@media all and (max-width: 1710px) {
+
 }
 
-.warpper { position: relative; width: 800px; margin: 0 auto; }
-.warpper .examples { margin-top: 50px;}
-.warpper .examples .testing-area { margin: 15px 0; padding: 10px; border: 1px dotted #000; position: relative; }
-.warpper .examples .testing-area ul { margin: 0; padding: 0; list-style: none; }
-.warpper .examples .testing-area ul li { margin: 0 15px 0 0; padding: 0; float: left; }
-.warpper .examples .testing-area ul li:last-child { margin-right: 0; }
-.warpper .examples .testing-area ul.list { margin: 0; padding: 0; list-style: circle; list-style-position: inside; list-style-type: disc; }
-.warpper .examples .testing-area ul.list li { margin: 0; padding: 4px; float: none; }
-.warpper .examples .testing-area ul.list li ul { list-style-type: square; margin: 5px 0 0 30px; }
-.warpper .footer { margin: 60px 0; }
-.warpper .footer ul { margin: 20px 0; padding: 0; }
-.warpper .footer ul li { list-style: none; }
+@media all and (max-width: 1450px) {
 
-.animation-wrapper { position: relative; padding: 10px; height: 200px; }
-.animation-wrapper #animation-element-1 { position: absolute; left: 10px; width: 100px; height: 100px; background-color: #FFFF00; color: #000; text-align: center; line-height: 100px; }
-.animation-wrapper #animation-element-2 { position: absolute; left: 210px; width: 100px; height: 100px; background-color: #FF0000; color: #FFF; text-align: center; line-height: 100px; }
-.animation-wrapper #animation-element-3 { position: absolute; left: 410px; width: 100px; height: 100px; background-color: #0000FF; color: #FFF; text-align: center; line-height: 100px; }
+}
 
 @media all and (max-width: 1024px) {
-    .warpper { width: 97%; margin: 0 auto; }
+
 }
 
 @media all and (max-width: 1023px) {
-
+    .header .h-content,
+    .content,
+    .footer .f-content { width: 94%; }
 }
 
 @media all and (max-width: 767px) {
-    #img1 { width: 100%; height: auto; }
-    .animation-wrapper { height: 300px; }
-    .animation-wrapper #animation-element-3 { left: 180px; top: 180px; }
+    .header .menu ul li { margin-bottom: 10px; }
+    .header .text { margin-top: 20px; }
+    .header .menu .js-logo img { width: 70px; height: auto; }
+    .content #drag-me { display: none; }
+    .content .example .actions button { margin-bottom: 5px; }
+    .content .example .animation-wrapper #animation-element-3 { left: 180px; top: 150px; }
+    .header .menu ul { width: 75%; }
 }
-
-.textAlign-center { text-align: center; }
-.cBlue { color: #017AED; }
 
 .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 .clearfix { display: inline-block; }
-/* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
-/* close commented backslash hack */

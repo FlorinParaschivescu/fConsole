@@ -29,8 +29,8 @@
                     <li><a href="#example6">Helper Methods</a></li>
                     <li><a class="buy" href="https://codecanyon.net/item/javascript-console-fconsole/14351041">Buy</a></li>
                 </ul>
-            </div>            
-            <div class="text">                
+            </div>
+            <div class="text">
                 <h1 class="title">fConsole.js v1.1</h1>
                 <p class="description">
                     A high-speed performance jQuery plugin for touch devices and desktop browsers.<br />
@@ -563,6 +563,27 @@
                         </ul>
                     </li>
                     <li>
+                        <h3>Devices:</h3>
+                        <ul>
+                            <!--isiOS-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isiOS()</div>
+                                <div class="method-use">
+                                    <p>check if a device it's an Apple device (iPhone, iPad, etc.)</p>
+                                    <pre><span class="code">fConsole.fn.isiOS();</span> //example of return true or false</pre>
+                                </div>
+                            </li>
+                            <!--isAndroid-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isAndroid()</div>
+                                <div class="method-use">
+                                    <p>check if a device it's an run on a Android device</p>
+                                    <pre><span class="code">fConsole.fn.isAndroid();</span> //example of return true or false</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <h3>Others:</h3>
                         <ul>
                             <!--loadJSScriptDynamically-->
@@ -627,6 +648,22 @@
                                 <div class="method-use">
                                     <p>Get the doctype tag</p>
                                     <pre><span class="code">fConsole.fn.getDoctype();</span> //example of result "&lt;!DOCTYPE html&gt;"</pre>
+                                </div>
+                            </li>
+                            <!--getGetOrdinal-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getGetOrdinal()</div>
+                                <div class="method-use">
+                                    <p>add the st, th, rd etc to the end of the number</p>
+                                    <pre><span class="code">fConsole.fn.getGetOrdinal(10);</span> //example of result "10th"</pre>
+                                </div>
+                            </li>
+                            <!--copyToClipboard-->
+                            <li>
+                                <div class="method-name">fConsole.fn.copyToClipboard()</div>
+                                <div class="method-use">
+                                    <p>copy a text into clipboard</p>
+                                    <pre><span class="code">fConsole.fn.copyToClipboard("some text");</span> //example of result true if browser support it or fase if not. If the result it's true then try paste the copied text.</pre>
                                 </div>
                             </li>
                         </ul>
@@ -778,6 +815,19 @@ $(document).ready(function () {
             <div class="actions">
                 <ul>
                     <li>
+                        <h3>v1.1.1 - 19 December, 2017</h3>
+                        <ul>
+                            <li>[FEATURE] – add new method fConsole.fn.copyToClipboard()</li>
+                            <li>[FEATURE] – add new method fConsole.fn.getGetOrdinal()</li>
+                            <li>[FEATURE] – add new method fConsole.fn.isiOS()</li>
+                            <li>[FEATURE] – add new method fConsole.fn.isAndroid()</li>
+                            <li>[BUG FIXED] – fixed fConsole.fn.getCurrentDate() - thanks to <strong>Huambo</strong></li>
+                            <li>[BUG FIXED] – fixed minimize action</li>
+                            <li>[BUG FIXED] – fixed fConsole.fn.generateGUID()</li>
+                            <li>[BUG FIXED] – general code improvement</li>
+                        </ul>
+                    </li>
+                    <li>
                         <h3>v1.1 - 24 July, 2016</h3>
                         <ul>
                             <li>[FEATURE] – add clear button into header</li>
@@ -804,8 +854,8 @@ $(document).ready(function () {
     <div class="footer">
         <div class="f-content">
             <ul>
-                <li><a href="http://compedio.ro/fLib" target="_blank">fLib.js</a></li>
-                <li><span class="separator">|</span></li>
+                <li style="margin-right: 10px;">Other projects:</li>
+                <!--<li><span class="separator">|</span></li>-->
                 <li><a href="http://www.mouse-track.com" target="_blank">mouse-track.com</a></li>
             </ul>
             <p class="copyright">&copy; 2016 Florin Paraschivescu. All Rights Reserved.</p>
@@ -814,7 +864,7 @@ $(document).ready(function () {
 
     <script type="text/javascript" src="js/libs/jQuery/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/libs/jQuery/jquery-migrate-1.4.1.min.js"></script>
-    <script type="text/javascript" src="js/fConsole-1.1.min.js"></script>
+    <script type="text/javascript" src="js/fConsole-1.1.1.min.js"></script>
     <script type="text/javascript" src="js/demo.js"></script>
 </body>
 </html>

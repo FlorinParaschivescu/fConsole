@@ -237,6 +237,12 @@
         generateGUID: function () { return _fn_generateGUID(); },
 
         //#endregion
+        //#region Devices
+
+        isiOS: function (number) { return _fn_isiOS(number); },
+        isAndroid: function (number) { return _fn_isAndroid(); },
+
+        //#endregion
         //#region Others
 
         loadJSScriptDynamically: function (src, callback) { return _fn_loadJSScriptDynamically(src, callback); },
@@ -246,7 +252,10 @@
         getBrowserVersion: function () { return _fn_getBrowserVersion(); },
         getIEVersion: function () { return _fn_getIEVersion(); },
         getOS: function () { return _fn_getOS(); },
-        getDoctype: function () { return _fn_getDoctype(); }
+        getDoctype: function () { return _fn_getDoctype() },
+        getGetOrdinal: function (number) { return _fn_getGetOrdinal(number); },
+        copyToClipboard: function (text) { return _fn_copyToClipboard(text); }
+
 
         //#endregion
     };

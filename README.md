@@ -115,14 +115,15 @@ $(document).ready(function () {
 <ul>
 	<li>v1.1.1 - 19 December, 2017</li>
     <ul>
-        <li>[FEATURE] – add new method fConsole.fn.copyToClipboard()</li>
+		<li>[FEATURE] – add new method fConsole.fn.copyToClipboard()</li>
         <li>[FEATURE] – add new method fConsole.fn.getGetOrdinal()</li>
         <li>[FEATURE] – add new method fConsole.fn.isiOS()</li>
         <li>[FEATURE] – add new method fConsole.fn.isAndroid()</li>
+        <li>[BUG FIXED] – fixed fConsole.fn.hexToRgb() - thanks to <strong>Huambo</strong></li>
         <li>[BUG FIXED] – fixed fConsole.fn.getCurrentDate() - thanks to <strong>Huambo</strong></li>
         <li>[BUG FIXED] – fixed minimize action</li>
         <li>[BUG FIXED] – fixed fConsole.fn.generateGUID()</li>
-        <li>[BUG FIXED] – general code improvement</li>
+        <li>[BUG FIXED] – general code improvement - thanks to <strong>Huambo</strong></li>
     </ul>
 	<li>v1.1 - 24 July, 2016</li>
 	<ul>

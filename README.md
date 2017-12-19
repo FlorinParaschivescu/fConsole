@@ -1,5 +1,5 @@
 # fConsole.js
-fConsole.js v1.1 - For touch devices and desktop browsers
+fConsole.js v1.1.1 - For touch devices and desktop browsers
 
 A simple plugin that you can use to display the values from JavaScript, HTML, CSS. Very useful for touch devices and desktop browsers.
 

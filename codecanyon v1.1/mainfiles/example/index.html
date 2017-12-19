@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>fConsole.js v1.1 - For touch devices and desktop browsers</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="h-content">
+            <div class="menu clearfix">
+                <div class="js-logo"><img src="images/javascript-logo.png" /></div>
+                <ul>
+                    <li><a href="#example1">Example 1</a></li>
+                    <li><a href="#example2">Example 2</a></li>
+                    <li><a href="#example3">Example 3</a></li>
+                    <li><a href="#example4">Example 4</a></li>
+                    <li><a href="#example5">Settings</a></li>
+                    <li><a href="#example6">Helper Methods</a></li>
+                    <li><a class="buy" href="https://codecanyon.net/item/javascript-console-fconsole/14351041">Buy</a></li>
+                </ul>
+            </div>            
+            <div class="text">                
+                <h1 class="title">fConsole.js v1.1</h1>
+                <p class="description">
+                    A high-speed performance jQuery plugin for touch devices and desktop browsers.<br />
+                    It will help you to get like any information you need (JavaScript | HTML | CSS)<br />
+                    in environments like mobile phones, tables or browsers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="example example1">
+            <a name="example1"></a>
+            <div class="text">
+                <h2>Example 1</h2>
+                <p>Execute simple function and see the results.</p>
+            </div>
+            <div class="actions">
+                <button id="a1">Get Current Url</button>
+                <button id="a2">Get Body BgColor</button>
+                <button id="a3">Get Current Date</button>
+            </div>
+        </div>
+
+        <div class="example example2">
+            <a name="example2"></a>
+            <div class="text">
+                <h2>Example 2</h2>
+                <p>Custom colors for your messages.</p>
+            </div>
+            <div class="actions">
+                <button id="a1">Message with Blue BgColor</button>
+                <button id="a2">Message with Yellow BgColor & Black Text</button>
+                <button id="a3">Message with Red BgColor</button>
+            </div>
+        </div>
+
+        <div class="example example3">
+            <a name="example3"></a>
+            <div class="text">
+                <h2>Example 3</h2>
+                <p>Show information in <b>real time</b>.</p>
+            </div>
+            <div class="actions">
+                <button id="a1">Show Current Time</button>
+                <button id="a2">Show Mouse Postion</button>
+                <button id="a3">Yellow Top Position</button>
+                <button id="a4">Red Left Position</button>
+                <button id="a5">Current BgColor</button>
+            </div>
+            <div class="animation-wrapper">
+                <div id="animation-element-1">test 1</div>
+                <div id="animation-element-2">test 2</div>
+                <div id="animation-element-3">test 3</div>
+            </div>
+        </div>
+
+        <div class="example example4">
+            <a name="example4"></a>
+            <div class="text">
+                <h2>Example 4</h2>
+                <p>Log JS errors.</p>
+            </div>
+            <div class="actions">
+                <button id="a1">Value of 'test' var</button>
+                <button id="a2">1 / 0</button>
+                <button id="a3">Execute metod 'someFunction'</button>
+            </div>
+        </div>
+
+        <div class="example example5">
+            <a name="example5"></a>
+            <div class="text">
+                <h2>Settings</h2>
+                <p>Update some settings in real time.</p>
+            </div>
+            <div class="actions">
+                <ul>
+                    <li>
+                        <h3>Themes</h3>
+                        <button id="a1">Default</button>
+                        <button id="a2">Clasic</button>
+                        <button id="a3">Light</button>
+                    </li>
+                    <li>
+                        <h3>Opacity:</h3>
+                        <button id="a4">Increase</button>
+                        <button id="a5">Decrease</button>
+                    </li>
+                    <li>
+                        <h3>Widht:</h3>
+                        <button id="a6">Full Width</button>
+                        <button id="a7">550px Width</button>
+                    </li>
+                </ul>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Full Features List</h3>
+                        <ul>
+                            <li>you will need <b class="c1">jQuery</b> plugin - you can download it from <a href="http://jquery.com/download/" class="c1" target="_blank"><b>here</b></a></li>
+                            <li><b>very useful for environments who lack of a console eg. (mobile, tables - browsers) as well for desktop browsers</b></li>
+                            <li>you can <b class="c1">dragg</b> the console around the browser (works on touch devices too)</li>
+                            <li>you can <b class="c1">resize</b> the console (works on touch devices too)</li>
+                            <li>you can run <b class="c1">JavaScript</b> code from fConsole and see the results by pressing <b class="c1">Enter Key</b> or <b class="c1">Exec</b> button.</li>
+                            <li>will log all JavaScript <b class="c1">errors</b></li>
+                            <li>on desktop browsers use "<b class="c1">UP</b>" or "<b class="c1">DOWN</b>" keys to access typing history</li>
+                            <li>you can clear/minimize the console</li>
+                            <li>
+                                available keyboard shortcuts:<br /><br />
+                                <b class="c1">alt + c</b> - Open fConsole<br />
+                                <b class="c1">alt + x</b> - Close fConsole<br />
+                                <b class="c1">alt + z</b> - Minimize fConsole<br />
+                                <b class="c1">alt + d</b> - Clear fConsole
+                            </li>
+                            <li>
+                                available inline commands:<br /><br />
+                                <b class="c1">/?</b> or <b class="c1">/help</b> - will show all avaiable commands<br />
+                                <b class="c1">/cls</b> or <b class="c1">/clear</b> - Clear fConsole<br />
+                                <b class="c1">/m</b> or <b class="c1">/min</b> or <b class="c1">/minimize</b> - Minimize fConsole<br />
+                                <b class="c1">/c</b> or <b class="c1">/close</b> - Close fConsole
+                            </li>
+                            <li>
+                                general <b class="c1">Help Functions</b>
+                                <br /><br />
+                                - you can access them like <b class="c1">fConsole.fn.&lt;function-name&gt;</b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>How to use this plugin</h3>
+                        <ul>
+                            <li>
+                                <b class="c1">Direct usage - will use default options</b>
+<pre>
+$(document).ready(function () {
+    fConsole.log("Hello!"); //simple message
+    fConsole.log("Hello!", null, "#00FF00"); //message with custom BgColor
+    fConsole.log("Hello!", null, "#00FF00", "#000"); //message with custom BgColor and TextColor
+    fConsole.log(function() { return Date.now(); }, 1000); //message in realtime - get time stamp at one second interval
+});
+</pre>
+                            </li>
+                            <li>
+                                <b class="c1">New object - using default options</b>
+<pre>
+$(document).ready(function () {
+    //init console
+    myConsole = new fConsole({
+        hideHeader: false, //if is true - will disable draggable option
+        hideFooter: false, //if is true - will no longer be able to run Javascript code
+        className: null, //if is set - you can control the console from CSS - all inline style will be removed
+        width: "250px",
+        minWidth: 0,
+        maxHeight: "250px",
+        position: "bottomLeft", //topLeft | topRight | bottomLeft | bottomRight
+        draggable: true,
+        opacity: 1,
+        fontSize: "12px",
+        fontFamily: "monospace",
+        theme: "default", //default | clasic | light
+        logJSErrors: true, //will log JS errors
+        zIndex: 2147483647
+    });
+    //myConsole.log method parameters
+        //  first param - a string
+        //  second param - interval - set in miliseconds
+        //  third param - row background color
+        //  four param - row text color
+        
+    myConsole.log("Hello!"); //simple message
+    myConsole.log("Hello!", null, "#00FF00"); //message with custom BgColor
+    myConsole.log("Hello!", null, "#00FF00", "#000"); //message with custom BgColor and TextColor
+    myConsole.log(function() { return Date.now(); }, 1000); //message in realtime - get time stamp at one second interval
+});
+</pre>
+                            </li>
+                            <li>
+                                <b class="c1">Change fConsole Settings like this</b>
+<pre>
+$(document).ready(function () {
+    myConsole = new fConsole();
+    myConsole.reloadSettings({ theme: "default" });
+    myConsole.reloadSettings({ width: "100%", minWidht: 0 });
+});
+</pre>
+                            </li>
+                            <li>
+                                <b class="c1">Help Functions</b>
+<pre>
+$(document).ready(function () {
+    fConsole.fn.isNumeric("123"); //will return true
+    fConsole.fn.isNumeric("123$%"); //will return false
+    fConsole.fn.isInt(123); //will return true
+    fConsole.fn.isTouchDevice();
+    
+    //etc...
+});
+</pre>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example example6">
+            <a name="example6"></a>
+            <div class="text">
+                <h2>Help Functions</h2>
+                <p>General methods that may help you.</p>
+            </div>
+            <div class="actions">
+                <ul>
+                    <li>
+                        <h3>Boolean:</h3>
+                        <ul>
+                            <!--isNumeric-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isNumeric()</div>
+                                <div class="method-use">
+                                    <p>Check if a string is a number</p>
+                                    <pre><span class="code">fConsole.fn.isNumeric("123");</span> //will return true<br /><span class="code">fConsole.fn.isNumeric("123$%");</span> //will return false</pre>
+                                </div>
+                            </li>
+                            <!--isInt-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isInt()</div>
+                                <div class="method-use">
+                                    <p>Check if a number is integer</p>
+                                    <pre><span class="code">fConsole.fn.isInt(123);</span> //will return true<br /><span class="code">fConsole.fn.isInt(123.25);</span> //will return false</pre>
+                                </div>
+                            </li>
+                            <!--isFloat-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isFloat()</div>
+                                <div class="method-use">
+                                    <p>Check if a number is float</p>
+                                    <pre><span class="code">fConsole.fn.isFloat(123.25);</span> //will return true<br /><span class="code">fConsole.fn.isFloat(123);</span> //will return false</pre>
+                                </div>
+                            </li>
+                            <!--isBoolean-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isBoolean()</div>
+                                <div class="method-use">
+                                    <p>Check if a variable is of type boolean</p>
+                                    <pre><span class="code">var x = true;<br />fConsole.fn.isBoolean(x);</span> //will return true<br /><span class="code">var x = 123;<br />fConsole.fn.isBoolean(x);</span> //will return false</pre>
+                                </div>
+                            </li>
+                            <!--isTouchDevice-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isTouchDevice()</div>
+                                <div class="method-use">
+                                    <p>Check if your using a touch device <span class="alert">(is not 100% accurate)</span></p>
+                                    <pre><span class="code">fConsole.fn.isTouchDevice();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                            <!--isiOS-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isiOS()</div>
+                                <div class="method-use">
+                                    <p>Check if your devices is runging on iOS</p>
+                                    <pre><span class="code">fConsole.fn.isiOS();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                            <!--isAndroid-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isAndroid()</div>
+                                <div class="method-use">
+                                    <p>Check if your device is runging on Andorid</p>
+                                    <pre><span class="code">fConsole.fn.isAndroid();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                            <!--isWindowsPhone-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isWindowsPhone()</div>
+                                <div class="method-use">
+                                    <p>Check if your device is runging on Andorid</p>
+                                    <pre><span class="code">fConsole.fn.isWindowsPhone();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                            <!--isMobile-->
+                            <li>
+                                <div class="method-name">fConsole.fn.isMobile()</div>
+                                <div class="method-use">
+                                    <p>Check if your device is a mobile device <span class="alert">(is not 100% accurate)</span></p>
+                                    <pre><span class="code">fConsole.fn.isMobile();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                            <!--jQueryIsAvailable-->
+                            <li>
+                                <div class="method-name">fConsole.fn.jQueryIsAvailable()</div>
+                                <div class="method-use">
+                                    <p>Check if jQuery library is avaible</p>
+                                    <pre><span class="code">fConsole.fn.jQueryIsAvailable();</span> //will return true or false</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Colors:</h3>
+                        <ul>
+                            <!--rgbToHex-->
+                            <li>
+                                <div class="method-name">fConsole.fn.rgbToHex()</div>
+                                <div class="method-use">
+                                    <p>Convert a RGB value into HEX value</p>
+                                    <pre><span class="code">fConsole.fn.rgbToHex("rgb(122,188,255)");</span> //will return "#7abcff"</pre>
+                                </div>
+                            </li>
+                            <!--hexToRgb-->
+                            <li>
+                                <div class="method-name">fConsole.fn.hexToRgb()</div>
+                                <div class="method-use">
+                                    <p>Convert a HEX value into RGB value</p>
+                                    <pre><span class="code">var rgb = fConsole.fn.hexToRgb("#7abcff");</span> //will return rgb.r => 122; rgb.g => 188; rgb.b => 255</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Size related:</h3>
+                        <ul>
+                            <!--getWindowWidth-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getWindowWidth()</div>
+                                <div class="method-use">
+                                    <p>Get screen width</p>
+                                    <pre><span class="code">fConsole.fn.getWindowWidth();</span> //will return your screen width</pre>
+                                </div>
+                            </li>
+                            <!--getWindowHeight-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getWindowHeight()</div>
+                                <div class="method-use">
+                                    <p>Get screen height</p>
+                                    <pre><span class="code">fConsole.fn.getWindowHeight();</span> //will return your screen height</pre>
+                                </div>
+                            </li>
+                            <!--getDocumetHeight-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getDocumetHeight()</div>
+                                <div class="method-use">
+                                    <p>Get documet height</p>
+                                    <pre><span class="code">fConsole.fn.getDocumetHeight();</span> //will return your documet height</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Cookies:</h3>
+                        <ul>
+                            <!--setCookie-->
+                            <li>
+                                <div class="method-name">fConsole.fn.setCookie()</div>
+                                <div class="method-use">
+                                    <p>Create a new Cookie</p>
+                                    <pre><span class="code">fConsole.fn.setCookie("cookie-name", "cookie-value", 3);</span> //will create a cookie with the name "cookie-name" and value "cookie-value". Will expire in 3 days.</pre>
+                                </div>
+                            </li>
+                            <!--setTempCookie-->
+                            <li>
+                                <div class="method-name">fConsole.fn.setTempCookie()</div>
+                                <div class="method-use">
+                                    <p>Create a new Cookie that will expire when you close the browser</p>
+                                    <pre><span class="code">fConsole.fn.setTempCookie("cookie-name", "cookie-value");</span> //will create a cookie with the name "cookie-name" and value "cookie-value".</pre>
+                                </div>
+                            </li>
+                            <!--setTempCookie-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getCookie()</div>
+                                <div class="method-use">
+                                    <p>Get the value of a specific Cookie</p>
+                                    <pre><span class="code">fConsole.fn.getCookie("cookie-name");</span> //will return cookie value or 'null' if the cookie donesn't exists.</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Validations:</h3>
+                        <ul>
+                            <!--validateEmail-->
+                            <li>
+                                <div class="method-name">fConsole.fn.validateEmail()</div>
+                                <div class="method-use">
+                                    <p>Validate an email addrees</p>
+                                    <pre><span class="code">fConsole.fn.validateEmail("test@test.com");</span> //will return true<br /><span class="code">fConsole.fn.validateEmail(".@test.com");</span> //will return false</pre>
+                                </div>
+                            </li>
+                            <!--validateIPaddress-->
+                            <li>
+                                <div class="method-name">fConsole.fn.validateIPaddress()</div>
+                                <div class="method-use">
+                                    <p>Validate an IP addrees</p>
+                                    <pre><span class="code">fConsole.fn.validateIPaddress("192.168.1.1");</span> //will return true<br /><span class="code">fConsole.fn.validateIPaddress("210.110");</span> //will return false</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Strings:</h3>
+                        <ul>
+                            <!--format-->
+                            <li>
+                                <div class="method-name">fConsole.fn.format()</div>
+                                <div class="method-use">
+                                    <p>Replaces one or more format items in a specified string with the string representation of a specified object.</p>
+                                    <pre><span class="code">fConsole.fn.format("{0} is in love with {1}", "black", "white");</span> //will return "black is in love with white"</pre>
+                                </div>
+                            </li>
+                            <!--capitalize-->
+                            <li>
+                                <div class="method-name">fConsole.fn.capitalize()</div>
+                                <div class="method-use">
+                                    <p>Capitalize words in a string</p>
+                                    <pre><span class="code">fConsole.fn.capitalize("your string");</span> //will return "Your String"</pre>
+                                </div>
+                            </li>
+                            <!--capitalizeFirstLetter-->
+                            <li>
+                                <div class="method-name">fConsole.fn.capitalizeFirstLetter()</div>
+                                <div class="method-use">
+                                    <p>Capitalize fist letter of a string</p>
+                                    <pre><span class="code">fConsole.fn.capitalizeFirstLetter("your string");</span> //will return "Your string"</pre>
+                                </div>
+                            </li>
+                            <!--startsWith-->
+                            <li>
+                                <div class="method-name">fConsole.fn.startsWith()</div>
+                                <div class="method-use">
+                                    <p>Determines whether the beginning of a string instance matches a specified string. Parameters string, prefix, ignoreCases</p>
+                                    <pre><span class="code">fConsole.fn.startsWith("your string", y);</span> //will return true<br /><span class="code">fConsole.fn.startsWith("your string", G);</span> //will return false<br /><span class="code">fConsole.fn.startsWith("your string", Y, true);</span> //will return true</pre>
+                                </div>
+                            </li>
+                            <!--endsWith-->
+                            <li>
+                                <div class="method-name">fConsole.fn.endsWith()</div>
+                                <div class="method-use">
+                                    <p>Determines whether the end of a string instance matches the specified string. Parameters string, suffix, ignoreCases</p>
+                                    <pre><span class="code">fConsole.fn.endsWith("your string", g);</span> //will return true<br /><span class="code">fConsole.fn.startsWith("your string", W);</span> //will return false<br /><span class="code">fConsole.fn.startsWith("your string", G, true);</span> //will return true</pre>
+                                </div>
+                            </li>
+                            <!--replaceAll-->
+                            <li>
+                                <div class="method-name">fConsole.fn.replaceAll()</div>
+                                <div class="method-use">
+                                    <p>Replace all occurrences of a string with another string</p>
+                                    <pre><span class="code">fConsole.fn.replaceAll("If it looks like a duck, quacks like a duck, it's a duck!", "duck", "dog");</span> //will return "If it looks like a dog, quacks like a dog, it's a dog!"</pre>
+                                </div>
+                            </li>
+                            <!--linkify-->
+                            <li>
+                                <div class="method-name">fConsole.fn.linkify()</div>
+                                <div class="method-use">
+                                    <p>Will replace plain URLs with links <span class="alert">(is not 100% accurate)</span></p>
+                                    <pre><span class="code">fConsole.fn.linkify("address@example.com");</span> //will return "&lt;a href=&#39;mailto:address@example.com&#39;&gt;address@example.com&lt;/a&gt;"</pre>
+                                </div>
+                            </li>
+                            <!--linkify-->
+                            <li>
+                                <div class="method-name">fConsole.fn.contains()</div>
+                                <div class="method-use">
+                                    <p>Returns true of false indicating whether a specified substring occurs within this string.</p>
+                                    <pre><span class="code">fConsole.fn.contains("foo", "oo");</span> //will return true</pre>
+                                </div>
+                            </li>
+                            <!--encodeHTML-->
+                            <li>
+                                <div class="method-name">fConsole.fn.encodeHTML()</div>
+                                <div class="method-use">
+                                    <p>This method makes sure that text is displayed correctly in the browser and not interpreted by the browser as HTML.</p>
+                                    <pre><span class="code">fConsole.fn.encodeHTML("&lt;li&gt;&lt;div class=&#39;method-name&#39;&gt;fConsole.fn.encodeHTML()&lt;/div&gt;")</span> //will return "&amp;lt;li&amp;gt;&amp;lt;div class='method-name'&amp;gt;fConsole.fn.encodeHTML()&amp;lt;/div&amp;gt;"<br /></pre>
+                                </div>
+                            </li>
+                            <!--decodeHTML-->
+                            <li>
+                                <div class="method-name">fConsole.fn.decodeHTML()</div>
+                                <div class="method-use">
+                                    <p>Converts a string that has been HTML-encoded for HTTP transmission into a decoded string.</p>
+                                    <pre><span class="code">fConsole.fn.decodeHTML("&amp;lt;li&amp;gt;&amp;lt;div class='method-name'&amp;gt;fConsole.fn.encodeHTML()&amp;lt;/div&amp;gt;")</span> //will return "&lt;li&gt;&lt;div class=&#39;method-name&#39;&gt;fConsole.fn.encodeHTML()&lt;/div&gt;"<br /></pre>
+                                </div>
+                            </li>
+                            <!--encodeBase64-->
+                            <li>
+                                <div class="method-name">fConsole.fn.encodeBase64()</div>
+                                <div class="method-use">
+                                    <p>Encode a string in Base 64</p>
+                                    <pre><span class="code">fConsole.fn.encodeBase64("home sweet home");</span> //will return "aG9tZSBzd2VldCBob21l"</pre>
+                                </div>
+                            </li>
+                            <!--decodeBase64-->
+                            <li>
+                                <div class="method-name">fConsole.fn.decodeBase64()</div>
+                                <div class="method-use">
+                                    <p>Decode a string from Base 64</p>
+                                    <pre><span class="code">fConsole.fn.decodeBase64("aG9tZSBzd2VldCBob21l");</span> //will return "home sweet home"</pre>
+                                </div>
+                            </li>
+                            <!--encodeUTF8Base64-->
+                            <li>
+                                <div class="method-name">fConsole.fn.encodeUTF8Base64()</div>
+                                <div class="method-use">
+                                    <p>Encode a UTF-8 string in Base 64</p>
+                                    <pre><span class="code">fConsole.fn.encodeUTF8Base64("ăaîbțcșdțe");</span> //will return "ÄaÃ®bÈcÈdÈe"</pre>
+                                </div>
+                            </li>
+                            <!--decodeBase64-->
+                            <li>
+                                <div class="method-name">fConsole.fn.decodeBase64()</div>
+                                <div class="method-use">
+                                    <p>Decode a UTF-8 string from Base 64</p>
+                                    <pre><span class="code">fConsole.fn.decodeUTF8Base64("ÄaÃ®bÈcÈdÈe");</span> //will return "ăaîbțcșdțe"</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>URL:</h3>
+                        <ul>
+                            <!--getUrlParams-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getUrlParams()</div>
+                                <div class="method-use">
+                                    <p>Return url parameters and their values</p>
+                                    <pre><span class="code">var result = fConsole.fn.getUrlParams("http://compedio.ro/fConsole?param1=a&amp;param2=b");</span> //will return result[0] => "param1" | result[1] => "param2" and result[result[0]] => "a" | result[result[1]] => "b"</pre>
+                                </div>
+                            </li>
+                            <!--encodeURL-->
+                            <li>
+                                <div class="method-name">fConsole.fn.encodeURL()</div>
+                                <div class="method-use">
+                                    <p>Encode a URL</p>
+                                    <pre><span class="code">fConsole.fn.encodeURL("page=2&sort=frequent&pagesize=15")</span> //will return "page%3D2%26sort%3Dfrequent%26pagesize%3D15"</pre>
+                                </div>
+                            </li>
+                            <!--decodeURL-->
+                            <li>
+                                <div class="method-name">fConsole.fn.decodeURL()</div>
+                                <div class="method-use">
+                                    <p>Decode a URL</p>
+                                    <pre><span class="code">fConsole.fn.decodeURL("page%3D2%26sort%3Dfrequent%26pagesize%3D15")</span> //will return "page=2&sort=frequent&pagesize=15"</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>JSON & Arrays:</h3>
+                        <ul>
+                            <!--sortJSONby-->
+                            <li>
+                                <div class="method-name">fConsole.fn.sortJSONby()</div>
+                                <div class="method-use">
+                                    <p>Sort a JSON by a propery ASC or DESC</p>
+                                    <pre><span class="code">var jsonTest = [{ "letter": "c" }, { "letter": "a" }, { "letter": "b" }];<br />var result = fConsole.fn.sortJSONby(jsonTest, "letter", "asc");</span> //will return the json sorted ASC</pre>
+                                </div>
+                            </li>
+                            <!--shuffleArray-->
+                            <li>
+                                <div class="method-name">fConsole.fn.shuffleArray()</div>
+                                <div class="method-use">
+                                    <p>Randomize (shuffle) a Javascript array</p>
+                                    <pre><span class="code">var array = [2, 11, 37, 42];<br />fConsole.fn.shuffleArray(array);</span> //example of return -> [11, 37, 2, 42]</pre>
+                                </div>
+                            </li>
+                            <!--uniqueArray-->
+                            <li>
+                                <div class="method-name">fConsole.fn.uniqueArray()</div>
+                                <div class="method-use">
+                                    <p>Remove duplicates from an array</p>
+                                    <pre><span class="code">var array = [2, 11, 2, 42];<br />fConsole.fn.uniqueArray(array);</span> //will return -> [2, 11, 42]</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>DateTime:</h3>
+                        <ul>
+                            <!--getCurrentTime-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getCurrentTime()</div>
+                                <div class="method-use">
+                                    <p>Get current time. First parameter is format ("hh:mm:ss a") | (hh:mm) | etc. Second parameter is 24 hours format, and is true by default</p>
+                                    <pre><span class="code">fConsole.fn.getCurrentTime("hh:mm:ss a")</span> //will return "22:55:16 PM"<br /><span class="code">fConsole.fn.getCurrentTime("hh:mm", false)</span> //will return "10:55"</pre>
+                                </div>
+                            </li>
+                            <!--getCurrentDate-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getCurrentDate()</div>
+                                <div class="method-use">
+                                    <p>Get current date (just the simple format, dd | mm | yyyy). First parameter is format ("dd/mm/yyyy")</p>
+                                    <pre><span class="code">fConsole.fn.getCurrentDate("dd/mm/yyyy")</span> //will return "11/01/2016"<br /><span class="code">fConsole.fn.getCurrentDate("mm-dd-yyyy")</span> //will return "01-11-2016"</pre>
+                                </div>
+                            </li>
+                            <!--getCurrentDate-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getUTCDateTime()</div>
+                                <div class="method-use">
+                                    <p>Get UTC DateTime</p>
+                                    <pre><span class="code">fConsole.fn.getUTCDateTime()</span> //will return "2016-02-18 12:43:41.513"</pre>
+                                </div>
+                            </li>
+                            <!--leapYear-->
+                            <li>
+                                <div class="method-name">fConsole.fn.leapYear()</div>
+                                <div class="method-use">
+                                    <p>Check if year is leap year</p>
+                                    <pre><span class="code">fConsole.fn.leapYear(2016)</span> //will return true<br /></pre>
+                                </div>
+                            </li>
+                            <!--getTimeAgoFromJsDate-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getTimeAgoFromJsDate()</div>
+                                <div class="method-use">
+                                    <p>Get time ago format from a JS date</p>
+                                    <pre><span class="code">fConsole.fn.getTimeAgoFromJsDate(Date.now() - 99999999999)</span> //3 years ago<br /></pre>
+                                </div>
+                            </li>
+                            <!--getTimeAgoFromSqlDate-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getTimeAgoFromSqlDate()</div>
+                                <div class="method-use">
+                                    <p>Get time ago format from a SQL date - format should always be: yyyy-mm-dd hh:mm:ss.ms</p>
+                                    <pre><span class="code">fConsole.fn.getTimeAgoFromSqlDate("2016-03-15 10:00:00.00")</span> //Last week<br /></pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Random:</h3>
+                        <ul>
+                            <li class="type-of-methods">
+                                <h2>Random</h2>
+                                <hr class="divider" />
+                            </li>
+                            <!--generateRandomInt-->
+                            <li>
+                                <div class="method-name">fConsole.fn.generateRandomInt()</div>
+                                <div class="method-use">
+                                    <p>Generate a random integer number. Parameteres are min and max.</p>
+                                    <pre><span class="code">fConsole.fn.generateRandomInt(1, 100)</span> //example of return 7</pre>
+                                </div>
+                            </li>
+                            <!--generateRandomArbitrary-->
+                            <li>
+                                <div class="method-name">fConsole.fn.generateRandomArbitrary()</div>
+                                <div class="method-use">
+                                    <p>Generate a random number. Parameteres are min, max and nrOfdecimallaces.</p>
+                                    <pre><span class="code">fConsole.fn.generateRandomArbitrary(1, 100, 3)</span> //example of return 99.309</pre>
+                                </div>
+                            </li>
+                            <!--generateRandomString-->
+                            <li>
+                                <div class="method-name">fConsole.fn.generateRandomString()</div>
+                                <div class="method-use">
+                                    <p>Generate a random string. Parameteres are len and charSet (-> is optional).</p>
+                                    <pre><span class="code">fConsole.fn.generateRandomString(5)</span> //example of return "nFkfL"<br /><span class="code">fConsole.fn.generateRandomString(3, "abcd")</span> //example of return "bba"</pre>
+                                </div>
+                            </li>
+                            <!--generateGUID-->
+                            <li>
+                                <div class="method-name">fConsole.fn.generateGUID()</div>
+                                <div class="method-use">
+                                    <p>Generate a GUID</p>
+                                    <pre><span class="code">fConsole.fn.generateGUID();</span> //example of return "c0e22597-3bc1-4830-98ef-84847211ca99"</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Others:</h3>
+                        <ul>
+                            <!--loadJSScriptDynamically-->
+                            <li>
+                                <div class="method-name">fConsole.fn.loadJSScriptDynamically()</div>
+                                <div class="method-use">
+                                    <p>Load a Javascript dynamically. Parameters src | callback</p>
+                                    <pre><span class="code">fConsole.fn.loadJSScriptDynamically("http://code.jquery.com/jquery-1.12.0.min.js", function() { alert("jQuery is loaded."); });</span></pre>
+                                </div>
+                            </li>
+                            <!--loadCssFile-->
+                            <li>
+                                <div class="method-name">fConsole.fn.loadCssFile()</div>
+                                <div class="method-use">
+                                    <p>Load a CSS file</p>
+                                    <pre><span class="code">fConsole.fn.loadCssFile("http://website.com/css/stylesheet.css");</span></pre>
+                                </div>
+                            </li>
+                            <!--cloneObj-->
+                            <li>
+                                <div class="method-name">fConsole.fn.cloneObj()</div>
+                                <div class="method-use">
+                                    <p>Clone a JavaScript object <span class="alert">(is not 100% accurate)</span></p>
+                                    <pre><span class="code">var x = 7;<br />var y = fConsole.fn.cloneObj(x);</span> //will result y => 7;</pre>
+                                </div>
+                            </li>
+                            <!--getBrowser-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getBrowser()</div>
+                                <div class="method-use">
+                                    <p>Get major browsers name</p>
+                                    <pre><span class="code">fConsole.fn.getBrowser();</span> //example of result "Chrome"</pre>
+                                </div>
+                            </li>
+                            <!--getBrowserVersion-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getBrowserVersion()</div>
+                                <div class="method-use">
+                                    <p>Get major browsers version</p>
+                                    <pre><span class="code">fConsole.fn.getBrowserVersion();</span> //example of result "47.0.2526.106"</pre>
+                                </div>
+                            </li>
+                            <!--getIEVersion-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getIEVersion()</div>
+                                <div class="method-use">
+                                    <p>Get Internet Explore version</p>
+                                    <pre><span class="code">fConsole.fn.getIEVersion();</span> //example of result on a IE browser = "11" else will return false</pre>
+                                </div>
+                            </li>
+                            <!--getOS-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getOS()</div>
+                                <div class="method-use">
+                                    <p>Get the type and version of the Operating System</p>
+                                    <pre><span class="code">fConsole.fn.getOS();</span> //example of result "Windows 10"</pre>
+                                </div>
+                            </li>
+                            <!--getDoctype-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getDoctype()</div>
+                                <div class="method-use">
+                                    <p>Get the doctype tag</p>
+                                    <pre><span class="code">fConsole.fn.getDoctype();</span> //example of result "&lt;!DOCTYPE html&gt;"</pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example example7 last">
+            <a name="example7"></a>
+            <div class="text">
+                <h2>Change log</h2>
+            </div>
+            <div class="actions">
+                <ul>
+                    <li>
+                        <h3>v1.1 - 24 July, 2016</h3>
+                        <ul>
+                            <li>[FEATURE] – add clear button into header</li>
+                            <li>[FEATURE] – add resize functionality to make the resize more easy</li>
+                            <li>[FEATURE] – add inline commands. Type in fConsole "<b class="c1">/?</b>" or "<b class="c1">/help</b>" to see them</li>
+                            <li>[FEATURE] – minimize console by pressing "<b class="c1">ESC</b>" key, press again to close it</li>
+                            <li>[FEATURE] – add lots of methods that may help you. Click <a href="#example6" class="c1"><b>here</b></a> to see them</li>
+                            <li>[BUG FIXED] – fixed the eval js method</li>
+                            <li>[BUG FIXED] – general code improvement</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>v1.0 - 11 January, 2016</h3>
+                        <ul>
+                            <li>initial release</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <img id="drag-me" src="images/dragg-me.png" />
+    </div>
+    <div class="footer">
+        <div class="f-content">
+            <p class="copyright">&copy; 2016 Florin Paraschivescu. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/libs/jQuery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/jQuery/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/fConsole-1.1.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+</body>
+</html>

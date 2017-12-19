@@ -1,0 +1,1 @@
+console, desktop, javascript, log, mobile, browser, touch, devices, iOS, Android, iPhone, iPad

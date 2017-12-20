@@ -101,11 +101,11 @@
             consoleElement.style.maxHeight = options.maxHeight;
             if (oldPosition != options.position) {
                 switch (options.position) {
-                    case "topLeft": { consoleElement.style.top = "0"; consoleElement.style.left = "0"; consoleElement.style.right = "auto"; consoleElement.style.bottom = "auto"; break; drg_wasDragged = false; }
-                    case "topRight": { consoleElement.style.top = "0"; consoleElement.style.right = "0"; consoleElement.style.left = "auto"; consoleElement.style.bottom = "auto"; break; drg_wasDragged = false; }
-                    case "bottomLeft": { consoleElement.style.bottom = "0"; consoleElement.style.left = "0"; consoleElement.style.top = "auto"; consoleElement.style.right = "auto"; break; drg_wasDragged = false; }
-                    case "bottomRight": { consoleElement.style.bottom = "0"; consoleElement.style.right = "0"; consoleElement.style.top = "auto"; consoleElement.style.left = "auto"; break; drg_wasDragged = false; }
-                    default: { consoleElement.style.bottom = "0"; consoleElement.style.left = "0"; consoleElement.style.top = "auto"; consoleElement.style.right = "auto"; }
+                    case "topLeft": { consoleElement.style.top = "0"; consoleElement.style.left = "0"; consoleElement.style.right = "auto"; consoleElement.style.bottom = "auto"; drg_wasDragged = false; break; }
+                    case "topRight": { consoleElement.style.top = "0"; consoleElement.style.right = "0"; consoleElement.style.left = "auto"; consoleElement.style.bottom = "auto"; drg_wasDragged = false; break; }
+                    case "bottomLeft": { consoleElement.style.bottom = "0"; consoleElement.style.left = "0"; consoleElement.style.top = "auto"; consoleElement.style.right = "auto"; drg_wasDragged = false; break; }
+                    case "bottomRight": { consoleElement.style.bottom = "0"; consoleElement.style.right = "0"; consoleElement.style.top = "auto"; consoleElement.style.left = "auto"; drg_wasDragged = false; break; }
+                    default: { consoleElement.style.bottom = "0"; consoleElement.style.left = "0"; consoleElement.style.top = "auto"; consoleElement.style.right = "auto"; break; }
                 }
             }
             consoleElement.style.opacity = options.opacity;
@@ -237,6 +237,12 @@
         generateGUID: function () { return _fn_generateGUID(); },
 
         //#endregion
+        //#region Devices
+
+        isiOS: function (number) { return _fn_isiOS(number); },
+        isAndroid: function (number) { return _fn_isAndroid(); },
+
+        //#endregion
         //#region Others
 
         loadJSScriptDynamically: function (src, callback) { return _fn_loadJSScriptDynamically(src, callback); },
@@ -246,7 +252,10 @@
         getBrowserVersion: function () { return _fn_getBrowserVersion(); },
         getIEVersion: function () { return _fn_getIEVersion(); },
         getOS: function () { return _fn_getOS(); },
-        getDoctype: function () { return _fn_getDoctype(); }
+        getDoctype: function () { return _fn_getDoctype() },
+        getGetOrdinal: function (number) { return _fn_getGetOrdinal(number); },
+        copyToClipboard: function (text) { return _fn_copyToClipboard(text); }
+
 
         //#endregion
     };
@@ -1207,7 +1216,7 @@
 	    }
 	}
 	function _fn_hexToRgb(hex) {
-	    if (hex == null || hex == NaN || hex == undefined) return null;
+        if (hex == null || hex == isNaN() || hex == undefined) return null;
 	    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 	    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
 	    hex = hex.replace(shorthandRegex, function (m, r, g, b) {

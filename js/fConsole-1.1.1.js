@@ -253,7 +253,7 @@
         getIEVersion: function () { return _fn_getIEVersion(); },
         getOS: function () { return _fn_getOS(); },
         getDoctype: function () { return _fn_getDoctype() },
-        getGetOrdinal: function (number) { return _fn_getGetOrdinal(number); },
+        getNumberOrdinal: function (number) { return _fn_getNumberOrdinal(number); },
         copyToClipboard: function (text) { return _fn_copyToClipboard(text); }
 
 
@@ -372,7 +372,7 @@
         getIEVersion: function () { return _fn_getIEVersion(); },
         getOS: function () { return _fn_getOS(); },
         getDoctype: function () { return _fn_getDoctype(); },
-        getGetOrdinal: function (number) { return _fn_getGetOrdinal(number); },
+        getNumberOrdinal: function (number) { return _fn_getNumberOrdinal(number); },
         copyToClipboard: function (text) { return _fn_copyToClipboard(text); }
 
         //#endregion
@@ -1823,7 +1823,7 @@
                     + ">";
 	    }
     }
-    function _fn_getGetOrdinal(n) {
+    function _fn_getNumberOrdinal(n) {
         var s = ["th", "st", "nd", "rd"],
             v = n % 100;
         return n + (s[(v - 20) % 10] || s[v] || s[0]);

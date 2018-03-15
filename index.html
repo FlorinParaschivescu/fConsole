@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>fConsole.js v1.1.1 - For touch devices and desktop browsers</title>
+    <title>fConsole.js v1.1.2 - For touch devices and desktop browsers</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <div class="text">
-                <h1 class="title">fConsole.js v1.1.1</h1>
+                <h1 class="title">fConsole.js v1.1.2</h1>
                 <p class="description">
                     A high-speed performance jQuery plugin for touch devices and desktop browsers.<br />
                     It will help you to get like any information you need (JavaScript | HTML | CSS)<br />
@@ -480,6 +480,14 @@
                                     <pre><span class="code">fConsole.fn.getCurrentTime("hh:mm:ss a")</span> //will return "22:55:16 PM"<br /><span class="code">fConsole.fn.getCurrentTime("hh:mm", false)</span> //will return "10:55"</pre>
                                 </div>
                             </li>
+                            <!--getCurrentTimeAddHours-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getCurrentTimeAddHours()</div>
+                                <div class="method-use">
+                                    <p>Get current time with add/subtract hours. First parameter is how much hours to add/substract, second parameter is format ("hh:mm:ss a") | (hh:mm) | etc and third parameter is 24 hours format, and is true by default</p>
+                                    <pre><span class="code">fConsole.fn.getCurrentTimeAddHours(2, "hh:mm:ss a")</span> //will return "18:59:16 PM"<br /><span class="code">fConsole.fn.getCurrentTimeAddHours(1, "hh:mm", false)</span> //will return "06:01"</pre>
+                                </div>
+                            </li>
                             <!--getCurrentDate-->
                             <li>
                                 <div class="method-name">fConsole.fn.getCurrentDate()</div>
@@ -488,7 +496,15 @@
                                     <pre><span class="code">fConsole.fn.getCurrentDate("dd/mm/yyyy")</span> //will return "11/01/2016"<br /><span class="code">fConsole.fn.getCurrentDate("mm-dd-yyyy")</span> //will return "01-11-2016"</pre>
                                 </div>
                             </li>
-                            <!--getCurrentDate-->
+                            <!--getCurrentDateTime-->
+                            <li>
+                                <div class="method-name">fConsole.fn.getCurrentDateTime()</div>
+                                <div class="method-use">
+                                    <p>Get current date & time with add/subtract hours (just the simple format, dd | mm | yyyy | hh | mi | ss | a). First parameter is how much hours to add/substract, second parameter is format ("dd-mm-yyyy hh:mi:ss a") and third parameter is 24 hours format, and is true by default</p>
+                                    <pre><span class="code">fConsole.fn.getCurrentDateTime(1, "yyyy-mm-dd hh:mi:ss a", false)</span> //will return "2018-03-15 06:11:42 PM"<br /><span class="code">fConsole.fn.getCurrentDateTime(-2, "yyyy-mm-dd hh:mi:ss a", true)</span> //will return "2018-03-15 15:12:38 PM"</pre>
+                                </div>
+                            </li> 
+                            <!--getUTCDateTime-->
                             <li>
                                 <div class="method-name">fConsole.fn.getUTCDateTime()</div>
                                 <div class="method-use">
@@ -651,12 +667,12 @@
                                     <pre><span class="code">fConsole.fn.getDoctype();</span> //example of result "&lt;!DOCTYPE html&gt;"</pre>
                                 </div>
                             </li>
-                            <!--getGetOrdinal-->
+                            <!--getNumberOrdinal-->
                             <li>
-                                <div class="method-name">fConsole.fn.getGetOrdinal()</div>
+                                <div class="method-name">fConsole.fn.getNumberOrdinal()</div>
                                 <div class="method-use">
                                     <p>add the st, th, rd etc to the end of the number</p>
-                                    <pre><span class="code">fConsole.fn.getGetOrdinal(10);</span> //example of result "10th"</pre>
+                                    <pre><span class="code">fConsole.fn.getNumberOrdinal(10);</span> //example of result "10th"</pre>
                                 </div>
                             </li>
                             <!--copyToClipboard-->
@@ -816,6 +832,15 @@ $(document).ready(function () {
             <div class="actions">
                 <ul>
                     <li>
+                        <h3>v1.1.2 - 15 March, 2018</h3>
+                        <ul>
+                            <li>[FEATURE] – add new method fConsole.fn.getCurrentTimeAddHours() - thanks to <strong>Everardo T. Cunha</strong></li>
+                            <li>[FEATURE] – add new method fConsole.fn.getCurrentDateTime() - thanks to <strong>Everardo T. Cunha</strong></li>
+                            <li>[CHANGE] – rename method fConsole.fn.getGetOrdinal() to fConsole.fn.getNumberOrdinal()</li>
+                            <li>[BUG FIXED] – fixed fConsole.fn.getCurrentDate() - thanks to <strong>Everardo T. Cunha</strong></li>
+                        </ul>
+                    </li>
+                    <li>
                         <h3>v1.1.1 - 19 December, 2017</h3>
                         <ul>
                             <li>[FEATURE] – add new method fConsole.fn.copyToClipboard()</li>
@@ -861,7 +886,7 @@ $(document).ready(function () {
 
     <script type="text/javascript" src="js/libs/jQuery/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/libs/jQuery/jquery-migrate-1.4.1.min.js"></script>
-    <script type="text/javascript" src="js/fConsole-1.1.1.min.js"></script>
+    <script type="text/javascript" src="js/fConsole-1.1.2.min.js"></script>
     <script type="text/javascript" src="js/demo.js"></script>
 </body>
 </html>
